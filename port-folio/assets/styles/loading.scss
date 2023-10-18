@@ -18,6 +18,9 @@
     border: 3px solid $green-color;
     border-top: 3px solid $light-green-color;
     border-bottom: 3px solid $light-green-color;
+    @media (max-width: 600px) {
+      width: 90vw;
+    }
   }
   &__bar {
     width: 90%;
@@ -30,9 +33,9 @@
     border-radius: 2px;
     &--inner {
       height: 100%;
-      width: 50%;
+      width: 0;
       border-radius: 2px;
-      background: $green-color;
+      background: $light-green-color;
     }
   }
   &__text {
@@ -44,6 +47,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (max-width: 355px) {
+      font-size: 17px;
+    }
     &--dot {
       width: 15px;
       height: 15px;
@@ -84,5 +90,19 @@
     justify-content: space-between;
     padding: 10px;
     color: $green-color;
+    &--number {
+      color: $green-color;
+    }
+  }
+  &__width_animation {
+    animation: width_animation 1s forwards;
+    @keyframes width_animation {
+      0% {
+        width: 85%;
+      }
+      100% {
+        width: 280px;
+      }
+    }
   }
 }
