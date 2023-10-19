@@ -1,12 +1,10 @@
-
 import { LitElement, html, css } from "lit-element";
 import { navigator } from "lit-element-router";
-
 
 export class Link extends navigator(LitElement) {
   static get properties() {
     return {
-      href: { type: String }
+      href: { type: String },
     };
   }
 
@@ -14,6 +12,8 @@ export class Link extends navigator(LitElement) {
     return css`
       a {
         margin: 5px;
+        text-decoration: none;
+        color: inherit;
       }
     `;
   }

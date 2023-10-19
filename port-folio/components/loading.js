@@ -91,4 +91,4 @@ export class LoadingPage extends LitElement {
   }
 }
 
-customElements.define("loading-page", LoadingPage);
+customElements.define("loading-component", LoadingPage);
