@@ -1,0 +1,46 @@
+@import "./base.scss";
+.social {
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  & .coloredIcon {
+    color: #fff;
+    font-size: 35px;
+    &:hover {
+      animation: coloredIconAnimation 0.2s infinite;
+    }
+
+    @keyframes coloredIconAnimation {
+      0% {
+        text-shadow:
+          5px 4px $icons-colorOne,
+          -5px -6px $icons-colorTwo;
+      }
+      25% {
+        text-shadow:
+          -5px -6px $icons-colorOne,
+          5px 4px $icons-colorTwo;
+      }
+      50% {
+        text-shadow:
+          5px -4px $icons-colorOne,
+          -8px 4px $icons-colorTwo;
+      }
+      75% {
+        text-shadow:
+          -8px -4px $icons-colorOne,
+          -5px -4px $icons-colorTwo;
+      }
+      100% {
+        text-shadow:
+          -5px 0 $icons-colorOne,
+          5px -4px $icons-colorTwo;
+      }
+    }
+  }
+}

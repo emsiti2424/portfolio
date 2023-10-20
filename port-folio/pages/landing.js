@@ -3,7 +3,10 @@ import styles from "../assets/styles/landing.scss";
 import { router } from "lit-element-router";
 import "../src/app-link.js";
 import "../src/app-main.js";
-export class LandingPage extends LitElement {
+import "../components/intro.js";
+import "../components/socials.js";
+
+export class LandingPage extends router(LitElement){
   static styles = css([styles]); // Use the css tag function from lit
 
   static get properties() {
@@ -14,20 +17,12 @@ export class LandingPage extends LitElement {
       cart: { type: Array },
     };
   }
-  constructor() {
-    super();
-    this.route = "";
-    this.params = {};
-    this.query = {};
-    this.cart = [];
-  }
-
   static get routes() {
     return [
       {
         name: "home",
         pattern: "",
-        data: { title: "Home" },
+        data: { title: 'Home' }
       },
       {
         name: "reviews",
@@ -55,46 +50,52 @@ export class LandingPage extends LitElement {
       },
     ];
   }
+  constructor() {
+    super();
+    this.route = "";
+    this.params = {};
+    this.query = {};
+    this.cart = [];
+  }
+
   router(route, params, query, data) {
     this.route = route;
     this.params = params;
     this.query = query;
+    console.log(route, params, query, data);
   }
   render() {
     return html`
-      <link
-        rel="stylesheet"
-        href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
-      />
+    
       <div class="landing">
         <!-- Header -->
         <header class="header">
           <div class="header__wrap">
             <ul class="header__left">
-              <app-link href="#">
+              <app-link href="/">
                 <li class="coolLink" data-text="Home"><span>Home</span></li>
               </app-link>
-              <app-link href="#" class="header__sm">
+              <app-link href="/reviews" class="header__sm">
                 <li class="coolLink " data-text="Reviews">
                   <span>Reviews</span>
                 </li>
               </app-link>
-              <app-link href="#">
+              <app-link href="/projects">
                 <li class="coolLink" data-text="Projects">
                   <span>Projects</span>
                 </li>
               </app-link>
-              <app-link href="#" class="header__sm">
+              <app-link href="/insights" class="header__sm">
                 <li class="coolLink" data-text="Insights">
                   <span>Insights</span>
                 </li>
               </app-link>
-              <app-link href="#" class="header__sm">
+              <app-link href="/faq" class="header__sm">
                 <li class="coolLink" data-text="Faq"><span>Faq</span></li>
               </app-link>
             </ul>
             <div class="header__right">
-              <app-link href="#"
+              <app-link href="/contact"
                 ><button class="coolButton">
                   <span>Contact</span>
                 </button></app-link
@@ -102,36 +103,19 @@ export class LandingPage extends LitElement {
             </div>
           </div>
         </header>
-       <!--  Intro -->
-       <div class="intro">
-        <h4>Hi 😎, My name is</h4>
-        <h1>Sebastian Gabriel</h1>
-        <h1>Full stack web developer</h1>
-        <h1>From Romania, currently living in Spain</h1>
-       </div>
+        <!-- <intro-component></intro-component> -->
         <app-main active-route=${this.route}>
-          <div route="home"></div>
+          <div route="home">
+          <intro-component></intro-component>
+          </div>
           <div route="reviews"></div>
           <div route="projects"></div>
           <div route="insights"></div>
           <div route="faq"></div>
           <div route="contact"></div>
+          <div route="not-found">Not Found</div>
         </app-main>
-        <!--  Socials iccons -->
-        <div class="social">
-          <a href="#" target="_blank">
-            <i class="uil uil-linkedin coloredIcon"></i>
-          </a>
-          <a href="#" target="_blank">
-            <i class="uil uil-linkedin coloredIcon"></i>
-          </a>
-          <a href="#" target="_blank">
-            <i class="uil uil-linkedin coloredIcon"></i>
-          </a>
-          <a href="#" target="_blank">
-            <i class="uil uil-linkedin coloredIcon"></i>
-          </a>
-        </div>
+      <socials-component></socials-component>
         <!-- Scroll Down -->
         <div class="scrollDown">
           <div class="scrollDown__wheel">
