@@ -1,5 +1,5 @@
 import { LitElement, html, css } from "lit";
-import styles from "../assets/styles/socrollDown.scss";
+import styles from "../assets/styles/scrollDown.scss";
 import { gsap } from "gsap";
 export class ScrollDownPage extends LitElement {
   static styles = css([styles]); // Use the css tag function from lit
