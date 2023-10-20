@@ -102,6 +102,13 @@ export class LandingPage extends LitElement {
             </div>
           </div>
         </header>
+       <!--  Intro -->
+       <div class="intro">
+        <h4>Hi 😎, My name is</h4>
+        <h1>Sebastian Gabriel</h1>
+        <h1>Full stack web developer</h1>
+        <h1>From Romania, currently living in Spain</h1>
+       </div>
         <app-main active-route=${this.route}>
           <div route="home"></div>
           <div route="reviews"></div>
@@ -127,7 +134,7 @@ export class LandingPage extends LitElement {
         </div>
         <!-- Scroll Down -->
         <div class="scrollDown">
-          <div class="scrollDowm__wheel">
+          <div class="scrollDown__wheel">
             <div class="scrollDown__wheel--inner"></div>
           </div>
           <div class="scrollDown__arrows">
