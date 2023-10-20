@@ -5,6 +5,7 @@ import "../src/app-link.js";
 import "../src/app-main.js";
 import "../components/intro.js";
 import "../components/socials.js";
+import "../components/scrollDown.js";
 
 export class LandingPage extends router(LitElement){
   static styles = css([styles]); // Use the css tag function from lit
@@ -66,7 +67,7 @@ export class LandingPage extends router(LitElement){
   }
   render() {
     return html`
-    
+
       <div class="landing">
         <!-- Header -->
         <header class="header">
@@ -103,7 +104,6 @@ export class LandingPage extends router(LitElement){
             </div>
           </div>
         </header>
-        <!-- <intro-component></intro-component> -->
         <app-main active-route=${this.route}>
           <div route="home">
           <intro-component></intro-component>
@@ -116,18 +116,7 @@ export class LandingPage extends router(LitElement){
           <div route="not-found">Not Found</div>
         </app-main>
       <socials-component></socials-component>
-        <!-- Scroll Down -->
-        <div class="scrollDown">
-          <div class="scrollDown__wheel">
-            <div class="scrollDown__wheel--inner"></div>
-          </div>
-          <div class="scrollDown__arrows">
-            <span class="scrollDown__arrow"></span>
-            <span class="scrollDown__arrow"></span>
-            <span class="scrollDown__arrow"></span>
-          </div>
-        </div>
-      </div>
+      <scrolldown-component></scrolldown-component>
     `;
   }
 }
