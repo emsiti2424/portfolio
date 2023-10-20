@@ -1,6 +1,6 @@
 import { LitElement, html, css } from "lit";
 import styles from "../assets/styles/socials.scss";
-import { gsap } from "gsap";
+
 export class SocialsPage extends LitElement {
   static styles = css([styles]); // Use the css tag function from lit
   render() {
