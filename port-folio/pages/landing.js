@@ -6,9 +6,9 @@ import "../src/app-main.js";
 import "../components/intro.js";
 import "../components/socials.js";
 import "../components/scrollDown.js";
-import "../components/skills.js"
+import "../components/skills.js";
 
-export class LandingPage extends router(LitElement){
+export class LandingPage extends router(LitElement) {
   static styles = css([styles]); // Use the css tag function from lit
 
   static get properties() {
@@ -24,7 +24,7 @@ export class LandingPage extends router(LitElement){
       {
         name: "home",
         pattern: "",
-        data: { title: 'Home' }
+        data: { title: "Home" },
       },
       {
         name: "reviews",
@@ -68,7 +68,6 @@ export class LandingPage extends router(LitElement){
   }
   render() {
     return html`
-
       <div class="landing">
         <!-- Header -->
         <header class="header">
@@ -108,7 +107,12 @@ export class LandingPage extends router(LitElement){
         <app-main active-route=${this.route}>
           <div route="home">
             <!--  Intro -->
-          <intro-component></intro-component>
+            <intro-component></intro-component>
+            <!--  Socials icons -->
+            <socials-component></socials-component>
+            <!-- Scroll Down -->
+            <scrolldown-component></scrolldown-component>
+        
           </div>
           <div route="reviews"></div>
           <div route="projects"></div>
@@ -117,11 +121,8 @@ export class LandingPage extends router(LitElement){
           <div route="contact"></div>
           <div route="not-found">Not Found</div>
         </app-main>
-        <!--  Socials icons -->
-      <socials-component></socials-component>
-      <!-- Scroll Down -->
-      <scrolldown-component></scrolldown-component>
-       <!-- skills -->
+      </div>
+      <!-- Skills -->
       <skills-component></skills-component>
     `;
   }
