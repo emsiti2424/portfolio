@@ -7,6 +7,7 @@ import "../components/intro.js";
 import "../components/socials.js";
 import "../components/scrollDown.js";
 import "../components/skills.js";
+import "../components/reviews.js";
 
 export class LandingPage extends router(LitElement) {
   static styles = css([styles]); // Use the css tag function from lit
@@ -112,7 +113,7 @@ export class LandingPage extends router(LitElement) {
             <socials-component></socials-component>
             <!-- Scroll Down -->
             <scrolldown-component></scrolldown-component>
-        
+
           </div>
           <div route="reviews"></div>
           <div route="projects"></div>
@@ -124,6 +125,9 @@ export class LandingPage extends router(LitElement) {
       </div>
       <!-- Skills -->
       <skills-component></skills-component>
+      <!-- Reviews -->
+      <reviews-component></reviews-component>
+     
     `;
   }
 }
