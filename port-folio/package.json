@@ -8,7 +8,8 @@
   "scripts": {
     "analyze": "cem analyze --litelement",
     "start": "web-dev-server",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "watch": "rollup -c --watch"
   },
   "dependencies": {
     "@rollup/plugin-image": "^3.0.3",
