@@ -15,7 +15,6 @@
     "gsap": "^3.12.2",
     "lit": "^2.0.2",
     "lit-element-router": "^2.0.3",
-    "rollup-plugin-image-files": "^1.4.2",
     "swiper": "^10.3.1"
   },
   "devDependencies": {

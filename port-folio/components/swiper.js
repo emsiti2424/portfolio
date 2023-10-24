@@ -58,7 +58,7 @@ export class SwiperPage extends LitElement {
       </div>
     `;
   }
-  firstUpdate(){
+  firstUpdated(){
     this.__dataManipulation();
   }
   __dataManipulation() {

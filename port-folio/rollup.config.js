@@ -3,6 +3,7 @@ import resolve from 'rollup-plugin-node-resolve';
 import { terser } from 'rollup-plugin-terser';
 import litcss from 'rollup-plugin-lit-css';
 import sass from 'rollup-plugin-sass';
+import image from '@rollup/plugin-image';
 
 export default {
   input: 'src/port-folio.js',
@@ -24,6 +25,5 @@ export default {
     litcss(),
     terser(),
     image(),
-    imageFiles(),
   ],
 };
