@@ -43,6 +43,7 @@ export class ReviewsPage extends LitElement {
       </div>
     `;
   }
+  
 }
 
 customElements.define("reviews-component", ReviewsPage);

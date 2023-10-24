@@ -10,6 +10,7 @@ export default {
     dir: 'dist',
     format: 'es',
   },
+  external: ['swiper/element/bundle'],
   plugins: [
     resolve(),
     sass({
@@ -22,5 +23,7 @@ export default {
     }),
     litcss(),
     terser(),
+    image(),
+    imageFiles(),
   ],
 };
