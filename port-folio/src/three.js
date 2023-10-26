@@ -70,9 +70,9 @@ class ThreeJSComponent extends LitElement {
       const y = this.geometry.attributes.position.getY(i);
       //animations
       const anim1 = 0.75 * Math.sin(x + time * 0.7);
-      const anim2 = 0.25 * Math.sin(x + time * 0.7);
+      const anim2 = 0.25 * Math.sin(y + time * 0.7);
       /*   this.geometry.attributes.position.setZ(i, -y * time * 2); */
-      this.geometry.attributes.position.setZ(i, anim1);
+      this.geometry.attributes.position.setZ(i, anim1, anim2);
       this.geometry.computeVertexNormals();
       this.geometry.attributes.position.needsUpdate = true;
     }
