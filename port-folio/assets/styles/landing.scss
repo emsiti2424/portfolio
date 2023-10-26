@@ -11,7 +11,8 @@ ul {
   background: #111;
   color: #fff;
   overflow: hidden;
-  background-image: url("../assets/images/shapes/92.jpg");
+  background: transparent;
+  /* background-image: url("../assets/images/shapes/92.jpg"); */
   background-size: cover;
   background-repeat: no-repeat;
   .header {
@@ -153,5 +154,5 @@ ul {
     }
   }
 
-  
+
 }

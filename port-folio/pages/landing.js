@@ -10,6 +10,8 @@ import "../components/skills.js";
 import "../components/reviews.js";
 import "../components/projects.js";
 import "../components/faq.js";
+import "../components/contact.js";
+import "../src/three.js";
 
 export class LandingPage extends router(LitElement) {
   static styles = css([styles]); // Use the css tag function from lit
@@ -71,7 +73,11 @@ export class LandingPage extends router(LitElement) {
   }
   render() {
     return html`
+
       <div class="landing">
+        <!-- three js background -->
+
+    <three-js-component></three-js-component>
         <!-- Header -->
         <header class="header">
           <div class="header__wrap">
@@ -132,7 +138,12 @@ export class LandingPage extends router(LitElement) {
       <project-component></project-component>
       <!-- faq -->
       <faq-component></faq-component>
+      <!-- Contact -->
+      <contact-component></contact-component>
     `;
+  }
+  __threManipulation(){
+
   }
 }
 customElements.define("landing-page", LandingPage);
