@@ -76,7 +76,6 @@ export class LandingPage extends router(LitElement) {
 
       <div class="landing">
         <!-- three js background -->
-
     <three-js-component></three-js-component>
         <!-- Header -->
         <header class="header">

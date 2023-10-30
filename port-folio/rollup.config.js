@@ -4,6 +4,7 @@ import { terser } from 'rollup-plugin-terser';
 import litcss from 'rollup-plugin-lit-css';
 import sass from 'rollup-plugin-sass';
 import image from '@rollup/plugin-image';
+import glsl from 'rollup-plugin-glsl';
 
 export default {
   input: 'src/port-folio.js',
@@ -25,5 +26,11 @@ export default {
     litcss(),
     terser(),
     image(),
+    glsl({
+
+      include: './assets/shaders/*.glsl',
+      sourceMap: true,
+      compress: false
+    }),
   ],
 };
